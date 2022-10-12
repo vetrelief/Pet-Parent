@@ -148,6 +148,23 @@ function testXMLAuth() {
 
 </script>
 <style>
+.new-top-header{
+   height: 6rem;
+   background-image: url('doggy_heaven_full.jpeg');
+   background-position: center;
+   background-size: cover;
+   display: block;
+}
+@media screen and (max-width:767px) {
+  
+   .new-top-header{
+       max-width: 100%;
+       height: 4rem;
+   }
+   .lookingdivs, #lookingdata{
+       width: 100% !important;
+   }
+}
 
 .GenLayout #LoginFormJS  {
 	float: left;
@@ -193,7 +210,8 @@ function testXMLAuth() {
 	font-family:"Trebuchet MS", Optima, Helvetica, sans-serif;
 	width: 300px;
 	display: none;
-	background-color: #004455;	// ie8 does not support transparency (or maybe its that XP doesnt)
+	background-color: #004455;	
+	/* // ie8 does not support transparency (or maybe its that XP doesnt) */
 	padding: 10px;
 	border: 2px solid #ddd;
 	float: left;
@@ -216,7 +234,7 @@ function testXMLAuth() {
 }
 
 img.btn_close {
- 	Position the close button  
+ 	/* Position the close button   */
  	float: right;
 	margin: -28px -28px 0 0;
 }
@@ -543,6 +561,36 @@ a.forgot{
 										{outline: 1px solid black; margin-bottom: 24px}
 		.formhidden[id*='petinfo_']:nth-child(2):nth-last-child(4)
 										{outline: 0px; margin-bottom: 0px}
+										@media (max-width:768px) {
+           body{
+               background-color: transparent;
+           }
+           .GenLayout #mainContent{
+               width: 100% !important;
+               max-width: 100% !important;
+              
+           }
+           #mainContent{
+               min-width: unset !important;
+           }
+           .section3_centerpart{
+               width: 90%;
+           }
+           #myForm label{
+               max-width: 100% !important;
+           }
+           .GenLayout #container{
+               width: 100% !important;
+               height: unset !important;
+           }
+           #choicecontainer{
+               max-width: 100% !important;
+           }
+           .cartoon{
+               display: none;
+           }
+       }
+
 	</style>
 	<!--End of Override CSS.-->
 	
@@ -550,9 +598,11 @@ a.forgot{
 
 <body  class="GenLayout">
 		<div id="container">
-  
+			<div class="new-top-header">
+
+			</div>
     
-  <div id="header">
+  <!-- <div id="header">
      <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr align="left">
         <td>
@@ -562,7 +612,8 @@ a.forgot{
         <td width="64%"><img src="http://vetrelief.com/tmpl/image_roto/Quotes.14.gif" alt="" name="rotate" width="648" height="137" align="right" id="rotate" style="background-color: #000000" /></td>
       </tr>
     </table>
-   </div><!-- end #header -->
+   </div> -->
+   <!-- end #header -->
 <div id="container">
 <p id="error" class="errorText"> </p>
 	
@@ -1305,9 +1356,7 @@ a.forgot{
 </div>
 
 <script type="text/javascript">
-<!--
 var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"http://vetrelief.com/tmpl/SpryAssets/SpryMenuBarDownHover.gif", imgRight:"http://vetrelief.com/tmpl/SpryAssets/SpryMenuBarRightHover.gif"});
-//-->
         </script>
 
 <script type="text/javascript">
