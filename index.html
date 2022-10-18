@@ -693,7 +693,7 @@ a.forgot{
 	<div class="form_section3">
 		<div class="section3_centerpart">
 			<img src="smallBird.png" class="cartoon" id="bird" />
-			<form method="POST" action="pet appointment css compliant" enctype="multipart/form-data" id="myForm">
+			<form method="POST" action="/pet_appointment/" id="myForm">
 			<div id="ownerform">
 				<label>Your Information:</label><br /><br />
 				<!-- We don't need these since they are collected elsewhere.
@@ -1058,7 +1058,7 @@ a.forgot{
 						else	//Let the submission proceed.
 						{
 							//Testing.
-							myform.action = "pet appointment css compliant.html";
+							myform.action = "/pet_appointment/";
 
 							//If the animal character is already appended, then submit.
 							if(myform.action.indexOf("character=") != -1)
