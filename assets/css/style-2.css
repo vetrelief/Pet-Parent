@@ -913,6 +913,9 @@ section {
     #hero3,#hero3-1,#hero3-2{
         margin-top: 150px;
     }
+    .pet-parent-form-top{
+        margin: 7rem 0 0;
+    }
     .doctors-available-main .main-doct-box {
         width: 345px;
         max-width: 100%;
