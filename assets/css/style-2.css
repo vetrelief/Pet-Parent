@@ -937,8 +937,34 @@ section {
     .contact-btn {
         flex-direction: column;
     }
+    
 }
-
+ input, textarea,select,#customlightbox64 div span{
+    width: 100%;
+    border-radius: 5px;
+    border:1px solid #0001;
+    outline: none;
+    padding: 5px 10px;
+}
+ input[type="submit"],input[type="button"],button {
+    border-radius: 3rem;
+    margin: 5px !important;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    padding: 5px 8px;
+    max-width: 200px;
+}
+.buttonholder{
+    text-align: center;
+}
+.formhidden{
+    width: 0;
+    display: none;
+}
+#myForm input:nth-last-child(1n+3), #myForm textarea, #myForm select{
+    width: 100%;
+}
 
 /*--------------------------------------------------------------
 # What We Treat
@@ -1511,4 +1537,23 @@ section {
         width: 45px;
         height: 45px;
     }
+    #MyForm{
+        padding: 10px;
+    }
+    #customlightbox64{
+        width: 98vw !important;
+        margin-left: unset !important;
+        transform: translate(-50%, -50%) !important;
+        max-height: 90vh !important;
+        overflow-y: scroll !important;
+    }
+    #customlightbox64 > div{
+        width: 100% !important;
+    }
+    #ownerformlightbox,#petproblem_0lightbox,#petinfo_1lightbox,#petproblem_1lightbox{
+        width: 100% !important;
+    }
+}
+[id*='petproblem_']:not(.formhidden),[id*='petproblem_']:not(.formhidden)  {
+    margin-top: 0 !important;
 }
