@@ -963,7 +963,7 @@ section {
     display: none;
 }
 #myForm input:nth-last-child(1n+3), #myForm textarea, #myForm select{
-    width: 100%;
+    width: 100% !important;
 }
 
 /*--------------------------------------------------------------
