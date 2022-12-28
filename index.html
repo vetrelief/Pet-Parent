@@ -514,21 +514,9 @@ a.forgot{
 		.form_section3 h1:first-child
 										{margin-bottom:-15px}
 		
-		#myForm					{border-radius: 20px; background-image: linear-gradient(to bottom right, deepskyblue, lightblue); padding: 9px}
-		#myForm label			{display: inline-block; width: 148px; text-align: right; vertical-align: top; /*font-family: "Trebuchet MS", Optima, Helvetica, sans-serif; font-size: 12px*/}
-		#myForm input:nth-last-child(1n+3),
-		#myForm textarea,
-		#myForm select			{width: 180px}
-		.buttonholder				{text-align: center}
-
-		#myForm textarea,
-		#myForm input,
-		#myForm select			{margin: 2px 0px}
 		
-		#myForm p				{text-align: center}
-
 		/* New CSS. */
-		.cartoon					{position: relative; left: 285; top: 38; margin-top: -180}
+		
 
 		#customlightbox64bg
 										{position: fixed; z-index: 1001; top: 0%; left: 0%; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.50)}
@@ -745,7 +733,11 @@ a.forgot{
 			opacity: 1;
 		}
 	}
-	</style><div id="login-box" class="login-popup"> <a href="#" class="close"><img src="login/images/close_pop.png" class="btn_close right" title="Close Window" alt="Close" /></a>
+	</style>
+	<div id="login-box" class="login-popup">
+		<a href="#" class="close">
+			<img src="login/images/close_pop.png" class="btn_close right" title="Close Window" alt="Close" />
+		</a>
 		<div class='login-header-text'>Please Login</div> <br><div class="errorText" id="errorText"></div><br>
 		<form id="login" name="login" method="post" action="https://vetrelief.com/login.phtml" onsubmit="return testXMLAuth1();">
 		<input type="hidden" name="LOGIN_FORM" value="" /><input type="hidden" name="page" value="IncentiveJobs">	  <fieldset class="textbox">
@@ -761,8 +753,6 @@ a.forgot{
 			<input name="submit" type="image" src="http://vetrelief.com/tmpl/images2/Go_Button.png" alt="submit"  onclick="testXMLAuth()" width="50" height="50">
 		  </div>  <p><a class="forgot" href="http://vetrelief.com/reset.phtml">Forgot your password?</a></p>	  <p><a class="forgot" href="http://vetrelief.com/register.phtml">New to VetRelief.com? Create an Account.</a></p>
 		</fieldset>
-		
-		  
 	  </form>
 	</div>
 	<!-- Begin. -->
@@ -780,152 +770,170 @@ a.forgot{
 
 		<br />
 	</div>
-	<div class="form_section3">
-		<div class="section3_centerpart">
-			<img src="smallBird.png" class="cartoon" id="bird" />
-			<form action="/pet_appointment/" id="myForm">
-			<div id="ownerform">
-				<label>Your Information:</label><br /><br />
-				<!-- We don't need these since they are collected elsewhere.
-				<label>First Name:</label>
-				<input type="text" name="firstname" /><br />
-				<label>Last Name:</label>
-				<input type="text" name="lastname" /><br />
-				<label>Email:</label>
-				<input type="email" name="email" /><br />
-				-->
-				<label>Phone Number:</label>
-				<input type="text" name="phone" required /><br />
-				<label>City:</label>
-				<input type="text" name="city" required /><br />
-				<label>State:</label>
-				<select name="state" required>
-					<option value=""></option>
-					<option value="AL">Alabama</option>
-					<option value="AK">Alaska</option>
-					<option value="AZ">Arizona</option>
-					<option value="AR">Arkansas</option>
-					<option value="CA">California</option>
-					<option value="CO">Colorado</option>
-					<option value="CT">Connecticut</option>
-					<option value="DE">Delaware</option>
-					<option value="DC">District Of Columbia</option>
-					<option value="FL">Florida</option>
-					<option value="GA">Georgia</option>
-					<option value="HI">Hawaii</option>
-					<option value="ID">Idaho</option>
-					<option value="IL">Illinois</option>
-					<option value="IN">Indiana</option>
-					<option value="IA">Iowa</option>
-					<option value="KS">Kansas</option>
-					<option value="KY">Kentucky</option>
-					<option value="LA">Louisiana</option>
-					<option value="ME">Maine</option>
-					<option value="MD">Maryland</option>
-					<option value="MA">Massachusetts</option>
-					<option value="MI">Michigan</option>
-					<option value="MN">Minnesota</option>
-					<option value="MS">Mississippi</option>
-					<option value="MO">Missouri</option>
-					<option value="MT">Montana</option>
-					<option value="NE">Nebraska</option>
-					<option value="NV">Nevada</option>
-					<option value="NH">New Hampshire</option>
-					<option value="NJ">New Jersey</option>
-					<option value="NM">New Mexico</option>
-					<option value="NY">New York</option>
-					<option value="NC">North Carolina</option>
-					<option value="ND">North Dakota</option>
-					<option value="OH">Ohio</option>
-					<option value="OK">Oklahoma</option>
-					<option value="OR">Oregon</option>
-					<option value="PA">Pennsylvania</option>
-					<option value="RI">Rhode Island</option>
-					<option value="SC">South Carolina</option>
-					<option value="SD">South Dakota</option>
-					<option value="TN">Tennessee</option>
-					<option value="TX">Texas</option>
-					<option value="UT">Utah</option>
-					<option value="VT">Vermont</option>
-					<option value="VA">Virginia</option>
-					<option value="WA">Washington</option>
-					<option value="WV">West Virginia</option>
-					<option value="WI">Wisconsin</option>
-					<option value="WY">Wyoming</option>
-				</select><br />
-				<label>Zip Code:</label>
-				<input type="text" name="zip" required /><br />
-				<label>Picture:</label>
-				<input type="file" name="ownerpicture" accept="image/*" /><br /><br /><br /><br />
-				</div>
-				<div id="petinfo_0">
-				<label>Pet Information:</label><br /><br />
-				<label>Pet's Name:</label>
-				<input type="text" name="pets[0][name]" required /><br />
-				<label>Animal Type:</label>
-				<select name="pets[0][species]" onchange="selectAnimal(this.value)" required>
-					<option value=""></option>
-					<option value="Dog">Dog</option>
-					<option value="Cat">Cat</option>
-					<option value="Rabbit">Rabbit</option>
-					<option value="Bird">Bird</option>
-					<option value="Horse">Horse</option>
-					<option value="Pig">Pig</option>
-					<option value="Reptile">Reptile</option>
-					<option value="Snake">Snake</option>
-					<option value="Fish">Fish</option>
-					<option value="Amphibian">Amphibian</option>
-					<option value="Rodent">Rodent</option>
-					<option value="Other">Other</option>
-				</select><br />
-				<label>Breed:</label>
-				<input type="text" name="pets[0][breed]" required /><br />
-				<label>Sex:</label>
-				<select name="pets[0][sex]" required>
-					<option value=""></option>
-					<option value="Male">Male</option>
-					<option value="Female">Female</option>
-				</select><br />
-				<label>Age:</label>
-				<input type="text" name="pets[0][age]" required /><br />
-				<label>Weight:</label>
-				<input type="text" name="pets[0][weight]" required /><br />
-				<label>Picture:</label>
-				<input type="file" name="pets[0][picture]" accept="image/*" /><br /><br />
-				<label>What is your current veterinary hospital or doctor's name?</label><input type="text" name="pets[0][hospital]" /><br />
-				</div>
-				<div id="petproblem_0">
-				<label>What category is your pet's issue?</label>
-				<select name="pets[0][problem]" required>
-					<option value=""></option>
-					<option value="Vomiting and Diarrhea">Vomiting and Diarrhea</option>
-					<option value="Eye and Ear Problems">Eye and Ear Problems</option>
-					<option value="Itching and Skin Problems">Itching and Skin Problems</option>
-					<option value="Coughing and Sneezing">Coughing and Sneezing</option>
-					<option value="Injuries and Other Accidents">Injuries and Other Accidents</option>
-					<option value="Accidental Poisoning or Toxin Ingestion">Accidental Poisoning or Toxin Ingestion</option>
-					<option value="Fleas, Ticks and Other Parasites">Fleas, Ticks and Other Parasites</option>
-					<option value="Wellness Care">Wellness Care</option>
-					<option value="Rehabilitation and Post-Op Care">Rehabilitation and Post-Op Care</option>
-					<option value="Behavioral Problems">Behavioral Problems</option>
-					<option value="Other">Other</option>
-				</select><br /><br />
-				<label>Briefly<br />Describe:</label>
-				<textarea name="pets[0][describe]" rows="4" required></textarea><br /><br />
-				<label>Submit Pictures/Video</label>
-				<input type="file" name="pets[0][picsvids][]" accept="image/*, video/*" multiple="multiple" /><br /><br />
-				<label>Consultation Contact Method</label>
-				<select name="pets[0][consultation]">
-					<option value="nopref">No Preference</option>
-					<option value="video">Video Consultation</option>
-					<option value="audio">Audio Phone Call</option>
-				</select><br /><br />
-				</div>
-				<!-- ReCaptcha Here. Replace the testing div with your recaptcha div. The css for hiding/showing pet sections is sensitive to how many siblings there are. -->
-				<div id="html_element_recaptcha"></div>
-				 <div class="buttonholder"><input type="button" id="petnext" class="form_btn" name="Button" value="Next"><input type="submit" id="petsubmit" class="form_btn" name="send" value="Submit"></div>
-			</form>
-			<!-- We'll be using a "formhidden" class in the css that we can use to hide sections we're not viewing. Line 507. -->
+	<div class="form_section3 pb-4 pb-lg-5">
+		<div class="container">
+			<div class="col-lg-8 mx-lg-auto">
+				<form action="/pet_appointment/" id="myForm">
+					<img src="smallBird.png" class="cartoon" id="bird" />
+					<div id="ownerform">
+					<h6 class="text-green font-weight-bold text-center">Your Information:</h6>
+					<div class="row">
+						<div class="col-md-6">
+							<label for="firstName">First Name:</label>
+							<input class="form-control" type="text" id="firstName" name="firstname"/>
+						</div>
+						<div class="col-md-6">
+							<label for="lastName">Last Name:</label>
+							<input type="text" id="lastName" class="form-control" name="lastname" />
+						</div>
+						<div class="col-md-6">
+							<label for="email">Email:</label>
+							<input type="email" id="email" class="form-control" name="email" />
+						</div>
+						<div class="col-md-6">
+							<label for="phoneNumber">Phone Number:</label>
+							<input type="text" name="phone" id="phoneNumber" class="form-control" required />
+						</div>
+						<div class="col-md-6">
+							<label for="city">City:</label>
+							<input type="text" name="city" id="city" class="form-control" required />
+						</div>
+						<div class="col-md-6">
+							<label for="state">State:</label>
+							<select name="state" id="state" class="form-control" required>
+								<option value=""></option>
+								<option value="AL">Alabama</option>
+								<option value="AK">Alaska</option>
+								<option value="AZ">Arizona</option>
+								<option value="AR">Arkansas</option>
+								<option value="CA">California</option>
+								<option value="CO">Colorado</option>
+								<option value="CT">Connecticut</option>
+								<option value="DE">Delaware</option>
+								<option value="DC">District Of Columbia</option>
+								<option value="FL">Florida</option>
+								<option value="GA">Georgia</option>
+								<option value="HI">Hawaii</option>
+								<option value="ID">Idaho</option>
+								<option value="IL">Illinois</option>
+								<option value="IN">Indiana</option>
+								<option value="IA">Iowa</option>
+								<option value="KS">Kansas</option>
+								<option value="KY">Kentucky</option>
+								<option value="LA">Louisiana</option>
+								<option value="ME">Maine</option>
+								<option value="MD">Maryland</option>
+								<option value="MA">Massachusetts</option>
+								<option value="MI">Michigan</option>
+								<option value="MN">Minnesota</option>
+								<option value="MS">Mississippi</option>
+								<option value="MO">Missouri</option>
+								<option value="MT">Montana</option>
+								<option value="NE">Nebraska</option>
+								<option value="NV">Nevada</option>
+								<option value="NH">New Hampshire</option>
+								<option value="NJ">New Jersey</option>
+								<option value="NM">New Mexico</option>
+								<option value="NY">New York</option>
+								<option value="NC">North Carolina</option>
+								<option value="ND">North Dakota</option>
+								<option value="OH">Ohio</option>
+								<option value="OK">Oklahoma</option>
+								<option value="OR">Oregon</option>
+								<option value="PA">Pennsylvania</option>
+								<option value="RI">Rhode Island</option>
+								<option value="SC">South Carolina</option>
+								<option value="SD">South Dakota</option>
+								<option value="TN">Tennessee</option>
+								<option value="TX">Texas</option>
+								<option value="UT">Utah</option>
+								<option value="VT">Vermont</option>
+								<option value="VA">Virginia</option>
+								<option value="WA">Washington</option>
+								<option value="WV">West Virginia</option>
+								<option value="WI">Wisconsin</option>
+								<option value="WY">Wyoming</option>
+							</select>
+						</div>
+						<div class="col-md-6 mb-2">
+							<label for="zipCode">Zip Code:</label>
+							<input type="text" id="zipCode" name="zip" class="form-control" required />
+						</div>
+						<div class="col-md-6 mb-2">
+							<label for="picture">Picture:</label>
+							<input type="file" id="picture" name="ownerpicture" class="form-control" accept="image/*" />
+						</div>
+					</div>
+				
+					</div>
+					<div id="petinfo_0">
+					<label>Pet Information:</label><br /><br />
+					<label>Pet's Name:</label>
+					<input type="text" name="pets[0][name]" required /><br />
+					<label>Animal Type:</label>
+					<select name="pets[0][species]" onchange="selectAnimal(this.value)" required>
+						<option value=""></option>
+						<option value="Dog">Dog</option>
+						<option value="Cat">Cat</option>
+						<option value="Rabbit">Rabbit</option>
+						<option value="Bird">Bird</option>
+						<option value="Horse">Horse</option>
+						<option value="Pig">Pig</option>
+						<option value="Reptile">Reptile</option>
+						<option value="Snake">Snake</option>
+						<option value="Fish">Fish</option>
+						<option value="Amphibian">Amphibian</option>
+						<option value="Rodent">Rodent</option>
+						<option value="Other">Other</option>
+					</select><br />
+					<label>Breed:</label>
+					<input type="text" name="pets[0][breed]" required /><br />
+					<label>Sex:</label>
+					<select name="pets[0][sex]" required>
+						<option value=""></option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select><br />
+					<label>Age:</label>
+					<input type="text" name="pets[0][age]" required /><br />
+					<label>Weight:</label>
+					<input type="text" name="pets[0][weight]" required /><br />
+					<label>Picture:</label>
+					<input type="file" name="pets[0][picture]" accept="image/*" /><br /><br />
+					<label>What is your current veterinary hospital or doctor's name?</label><input type="text" name="pets[0][hospital]" /><br />
+					</div>
+					<div id="petproblem_0">
+					<label>What category is your pet's issue?</label>
+					<select name="pets[0][problem]" required>
+						<option value=""></option>
+						<option value="Vomiting and Diarrhea">Vomiting and Diarrhea</option>
+						<option value="Eye and Ear Problems">Eye and Ear Problems</option>
+						<option value="Itching and Skin Problems">Itching and Skin Problems</option>
+						<option value="Coughing and Sneezing">Coughing and Sneezing</option>
+						<option value="Injuries and Other Accidents">Injuries and Other Accidents</option>
+						<option value="Accidental Poisoning or Toxin Ingestion">Accidental Poisoning or Toxin Ingestion</option>
+						<option value="Fleas, Ticks and Other Parasites">Fleas, Ticks and Other Parasites</option>
+						<option value="Wellness Care">Wellness Care</option>
+						<option value="Rehabilitation and Post-Op Care">Rehabilitation and Post-Op Care</option>
+						<option value="Behavioral Problems">Behavioral Problems</option>
+						<option value="Other">Other</option>
+					</select><br /><br />
+					<label>Briefly<br />Describe:</label>
+					<textarea name="pets[0][describe]" rows="4" required></textarea><br /><br />
+					<label>Submit Pictures/Video</label>
+					<input type="file" name="pets[0][picsvids][]" accept="image/*, video/*" multiple="multiple" /><br /><br />
+					<label>Consultation Contact Method</label>
+					<select name="pets[0][consultation]">
+						<option value="nopref">No Preference</option>
+						<option value="video">Video Consultation</option>
+						<option value="audio">Audio Phone Call</option>
+					</select><br /><br />
+					</div>
+					<!-- ReCaptcha Here. Replace the testing div with your recaptcha div. The css for hiding/showing pet sections is sensitive to how many siblings there are. -->
+					<div id="html_element_recaptcha"></div>
+					 <div class="buttonholder"><input type="button" id="petnext" class="btn btn-primary" name="Button" value="Next"><input type="submit" id="petsubmit" class="form_btn" name="send" value="Submit"></div>
+				</form>
+			</div>
 			<script>
 				var animalBox = document.getElementsByClassName("cartoon")[0];
 				var chosenAnimal;
