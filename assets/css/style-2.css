@@ -949,11 +949,13 @@ section {
  input[type="submit"],input[type="button"],button {
     border-radius: 3rem;
     margin: 5px !important;
-    color: #fff;
-    background-color: #007bff;
-    border: 1px solid #007bff;
     padding: 5px 10px;
     max-width: 200px;
+}
+.form_btn{
+    background-color: #89cc90 !important;
+    border: 1px solid #89cc90 !important;
+    color: #fff !important;
 }
 .buttonholder{
     text-align: center;
@@ -1585,6 +1587,7 @@ img.cartoon{
     display: block;
     margin-bottom: 0;
     margin-top: 10px;
+    font-size: 0.95rem;
     color: #555;
 }
 #myForm input:nth-last-child(1n+3),

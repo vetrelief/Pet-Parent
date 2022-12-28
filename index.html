@@ -551,9 +551,9 @@ a.forgot{
 										{height: 0px}
 
 		[id*='petinfo_']:not(.formhidden)
-										{outline: 1px solid black; padding: 24px 12px 12px}
+										{outline: 1px solid #89cc9055; border-radius: 8px; padding: 24px 12px 12px}
 		[id*='petproblem_']:not(.formhidden)
-										{outline: 1px solid black; padding: 24px 12px 12px}
+										{outline: 1px solid #89cc9055; border-radius: 8px; padding: 24px 12px 12px}
 		[id*='petinfo_']:not(.formhidden):not(nth-child(2))
 										{margin-top: -24px}
 		[id*='petproblem_']:not(.formhidden)
@@ -867,71 +867,103 @@ a.forgot{
 				
 					</div>
 					<div id="petinfo_0">
-					<label>Pet Information:</label><br /><br />
-					<label>Pet's Name:</label>
-					<input type="text" name="pets[0][name]" required /><br />
-					<label>Animal Type:</label>
-					<select name="pets[0][species]" onchange="selectAnimal(this.value)" required>
-						<option value=""></option>
-						<option value="Dog">Dog</option>
-						<option value="Cat">Cat</option>
-						<option value="Rabbit">Rabbit</option>
-						<option value="Bird">Bird</option>
-						<option value="Horse">Horse</option>
-						<option value="Pig">Pig</option>
-						<option value="Reptile">Reptile</option>
-						<option value="Snake">Snake</option>
-						<option value="Fish">Fish</option>
-						<option value="Amphibian">Amphibian</option>
-						<option value="Rodent">Rodent</option>
-						<option value="Other">Other</option>
-					</select><br />
-					<label>Breed:</label>
-					<input type="text" name="pets[0][breed]" required /><br />
-					<label>Sex:</label>
-					<select name="pets[0][sex]" required>
-						<option value=""></option>
-						<option value="Male">Male</option>
-						<option value="Female">Female</option>
-					</select><br />
-					<label>Age:</label>
-					<input type="text" name="pets[0][age]" required /><br />
-					<label>Weight:</label>
-					<input type="text" name="pets[0][weight]" required /><br />
-					<label>Picture:</label>
-					<input type="file" name="pets[0][picture]" accept="image/*" /><br /><br />
-					<label>What is your current veterinary hospital or doctor's name?</label><input type="text" name="pets[0][hospital]" /><br />
+						<h6 class="text-green font-weight-bold text-center">Pet Information:</h6>
+						<div class="row">
+							<div class="col-md-6">
+								<label for="petName">Pet's Name:</label>
+								<input type="text" id="petName" class="form-control" name="pets[0][name]" required />
+							</div>
+							<div class="col-md-6">
+								<label for="animalType">Animal Type:</label>
+								<select name="pets[0][species]" class="form-control" id="animalType" onchange="selectAnimal(this.value)" required>
+									<option value=""></option>
+									<option value="Dog">Dog</option>
+									<option value="Cat">Cat</option>
+									<option value="Rabbit">Rabbit</option>
+									<option value="Bird">Bird</option>
+									<option value="Horse">Horse</option>
+									<option value="Pig">Pig</option>
+									<option value="Reptile">Reptile</option>
+									<option value="Snake">Snake</option>
+									<option value="Fish">Fish</option>
+									<option value="Amphibian">Amphibian</option>
+									<option value="Rodent">Rodent</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<label for="breed">Breed:</label>
+								<input type="text" id="breed" class="form-control" name="pets[0][breed]" required />
+							</div>
+							<div class="col-md-6">
+								<label for="sex">Sex:</label>
+								<select name="pets[0][sex]" id="sex" class="form-control" required>
+									<option value=""></option>
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<label for="age">Age:</label>
+								<input type="text" id="age" class="form-control" name="pets[0][age]" required />
+							</div>
+							<div class="col-md-6">
+								<label for="weight">Weight:</label>
+								<input type="text" id="weight" class="form-control" name="pets[0][weight]" required />
+							</div>
+							<div class="col-md-6">
+								<label for="picture">Picture:</label>
+								<input type="file" id="picture" class="form-control" name="pets[0][picture]" accept="image/*" />
+							</div>
+							<div class="col-md-6">
+								<label for="vetOrHospital">Current veterinary hospital / doctor's name?</label>
+								<input type="text" id="vetOrHospital" class="form-control" name="pets[0][hospital]" />
+							</div>
+						</div>
+					
 					</div>
 					<div id="petproblem_0">
-					<label>What category is your pet's issue?</label>
-					<select name="pets[0][problem]" required>
-						<option value=""></option>
-						<option value="Vomiting and Diarrhea">Vomiting and Diarrhea</option>
-						<option value="Eye and Ear Problems">Eye and Ear Problems</option>
-						<option value="Itching and Skin Problems">Itching and Skin Problems</option>
-						<option value="Coughing and Sneezing">Coughing and Sneezing</option>
-						<option value="Injuries and Other Accidents">Injuries and Other Accidents</option>
-						<option value="Accidental Poisoning or Toxin Ingestion">Accidental Poisoning or Toxin Ingestion</option>
-						<option value="Fleas, Ticks and Other Parasites">Fleas, Ticks and Other Parasites</option>
-						<option value="Wellness Care">Wellness Care</option>
-						<option value="Rehabilitation and Post-Op Care">Rehabilitation and Post-Op Care</option>
-						<option value="Behavioral Problems">Behavioral Problems</option>
-						<option value="Other">Other</option>
-					</select><br /><br />
-					<label>Briefly<br />Describe:</label>
-					<textarea name="pets[0][describe]" rows="4" required></textarea><br /><br />
-					<label>Submit Pictures/Video</label>
-					<input type="file" name="pets[0][picsvids][]" accept="image/*, video/*" multiple="multiple" /><br /><br />
-					<label>Consultation Contact Method</label>
-					<select name="pets[0][consultation]">
-						<option value="nopref">No Preference</option>
-						<option value="video">Video Consultation</option>
-						<option value="audio">Audio Phone Call</option>
-					</select><br /><br />
+						<div class="row">
+							<div class="col-md-12">
+								<label for="petIssue">What category is your pet's issue?</label>
+								<select name="pets[0][problem]" id="petIssue" class="form-control" required>
+									<option value=""></option>
+									<option value="Vomiting and Diarrhea">Vomiting and Diarrhea</option>
+									<option value="Eye and Ear Problems">Eye and Ear Problems</option>
+									<option value="Itching and Skin Problems">Itching and Skin Problems</option>
+									<option value="Coughing and Sneezing">Coughing and Sneezing</option>
+									<option value="Injuries and Other Accidents">Injuries and Other Accidents</option>
+									<option value="Accidental Poisoning or Toxin Ingestion">Accidental Poisoning or Toxin Ingestion</option>
+									<option value="Fleas, Ticks and Other Parasites">Fleas, Ticks and Other Parasites</option>
+									<option value="Wellness Care">Wellness Care</option>
+									<option value="Rehabilitation and Post-Op Care">Rehabilitation and Post-Op Care</option>
+									<option value="Behavioral Problems">Behavioral Problems</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<div class="col-md-12">
+								<label for="brieflyDescribe">Briefly Describe:</label>
+								<textarea name="pets[0][describe]" id="brieflyDescribe" class="form-control" rows="4" required></textarea>
+							</div>
+							<div class="col-md-6">
+								<label for="submitPictures">Submit Pictures/Video</label>
+								<input type="file" name="pets[0][picsvids][]" class="form-control" id="submitPictures" accept="image/*, video/*" multiple="multiple" />
+							</div>
+							<div class="col-md-6">
+								<label for="consultationContact">Consultation Contact Method</label>
+								<select name="pets[0][consultation]" id="consultationContact" class="form-control">
+									<option value="nopref">No Preference</option>
+									<option value="video">Video Consultation</option>
+									<option value="audio">Audio Phone Call</option>
+								</select>
+							</div>
+						</div>
 					</div>
-					<!-- ReCaptcha Here. Replace the testing div with your recaptcha div. The css for hiding/showing pet sections is sensitive to how many siblings there are. -->
 					<div id="html_element_recaptcha"></div>
-					 <div class="buttonholder"><input type="button" id="petnext" class="btn btn-primary" name="Button" value="Next"><input type="submit" id="petsubmit" class="form_btn" name="send" value="Submit"></div>
+					<div class="buttonholder">
+						<input type="button" id="petnext" class="btn btn-primary" name="Button" value="Next">
+						<input type="submit" id="petsubmit" class="btn btn-primary" name="send" value="Submit">
+					</div>
 				</form>
 			</div>
 			<script>
